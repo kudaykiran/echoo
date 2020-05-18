@@ -49,6 +49,8 @@
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
+    "asset": "^0.4.13",
+    "ava": "^3.8.2",
     "axios": "^0.16.2",
     "babel-loader": "^7.0.0",
     "bcrypt-nodejs": "0.0.3",
@@ -67,6 +69,7 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "lrc-parser": "^1.0.0",
+    "mocha": "^7.1.2",
     "mongoose": "^4.10.8",
     "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
