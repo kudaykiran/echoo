@@ -51,7 +51,7 @@
     "app-module-path": "^2.2.0",
     "asset": "^0.4.13",
     "ava": "^3.8.2",
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "babel-loader": "^7.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
