@@ -70,7 +70,7 @@
     "lodash.throttle": "^4.1.1",
     "lrc-parser": "^1.0.0",
     "mocha": "^7.1.2",
-    "mongoose": "^4.10.8",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
