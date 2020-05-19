@@ -12,17 +12,16 @@ pipeline {
                 sh  'npm install'
                 sh  'npm install express'
             }
-        }
-        
-        stage('sonarQube') {
-            steps{
-            sh 'sonar-scanner'
-            }
-        }
+        } 
         stage('deploy') {
             steps{
               sh 'npm run '
-              sh 'npm start'
+              sh 'npm start &'
+            }
+        }
+       stage('sonarQube') {
+            steps{
+            sh 'sonar-scanner'
             }
         }
     }
