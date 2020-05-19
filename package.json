@@ -12,13 +12,17 @@
     "webpack:dev": "./node_modules/.bin/webpack-dev-server --content-base public --inline --hot --progress",
     "webpack:prod": "./node_modules/.bin/webpack --env=prod --progress --profile --colors",
     "build": "npm run clean && npm run webpack:prod",
-    "test": "ava --verbose"
+    "test": "nyc --reporter=lcov --reporter=text-lcov mocha test/*.js",
+    "lint": "eslint ."
+   
   },
-  "ava": {
-    "files": [
-      "test/**"
-    ]
-  },
+   "config": {
+        "mocha-sonar-reporter": {
+            "classname": "Test",
+            "testdir": "test",
+            "outputfile": "report/TEST-results.xml"
+        }
+    }
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.2.3",
@@ -38,6 +42,7 @@
     "globby": "^6.1.0",
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.2",
+    "nyc": "^15.0.1",
     "progress-bar-webpack-plugin": "^1.11.0",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.1",
@@ -70,6 +75,7 @@
     "lodash.throttle": "^4.1.1",
     "lrc-parser": "^1.0.0",
     "mocha": "^7.1.2",
+    "mocha-sonar-reporter": "^0.1.6",
     "mongoose": "^4.10.8",
     "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
@@ -87,6 +93,7 @@
     "redux-thunk": "^2.2.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
+    "sonar-scanner": "^3.1.0",
     "validator": "^8.0.0"
   }
 }
